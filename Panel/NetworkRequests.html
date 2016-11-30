@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app>
+<head>
+  <link rel='stylesheet' href='NetworkRequests.css'>
+  <script src="../lib/jquery-3.1.1.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="angular-1.0.1.min.js"></script>
+  
+  </head>
+<body>
+  <div id = '1'  >
+    <h2 >SAP OData Requests Monitor </h2>
+ 
+      <button id= 'clearBtn' title="Clear"   >Clear</button>
+	  <button id='gwBtn' title="Push to GW Client" >Push to GW Client</button>
+	  <button id='gwDetect' title="Push to GW Client" >Show GW System</button>
+
+  </div>
+  
+ <div id= '2' >
+  <div ng-controller="mycontroller">
+     <ul> <li ng-repeat="url in urls"><input type="checkbox" ng-model="url.select">{{url.URL}} Method: {{url.Method}}</li></ul>
+  </div>
+   <div class="header">
+   
+  <script src="InspectedWindowLoadMonitor.js" type="text/javascript"></script>
+  <script src="NetworkRequests.js" type="text/javascript"></script>
+   
+  
+</body>
+</html>
